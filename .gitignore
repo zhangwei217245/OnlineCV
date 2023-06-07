@@ -1,0 +1,9 @@
+/_site/
+Gemfile.lock
+*.gem
+.sass-cache/
+yarn.lock
+node_modules
+script/bin
+script/lib
+script/include
