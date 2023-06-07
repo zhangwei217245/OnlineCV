@@ -1,0 +1,106 @@
+categories:
+- Type: Conference Presentations
+  Entries:
+  - ID: 1
+    title: Exploiting User Activeness for Data Retention in HPC Systems
+    time: Nov 2021
+    location: the 33rd ACM/IEEE International Conference for High Performance Computing, Networking, Storage, and Analysis (SC '21)
+  - ID: 2
+    title: Efficient Metadata Search for Scientific Data
+    time: Nov 2020
+    location: the 32nd ACM/IEEE International Conference for High Performance Computing, Networking, Storage, and Analysis (SC ’20)
+  - ID: 3
+    title: MIQS - Metadata Indexing and Querying Service for Self-describing Data Formats
+    time: Nov 2019
+    location: the 31st ACM/IEEE International Conference for High Performance Computing, Networking, Storage, and Analysis (SC ’19)  
+  - ID: 4 
+    title: DART - Distributed Adaptive Radix Tree for Efficient Affix-based Keyword Search on HPC Systems
+    time: Nov 2018
+    location: the 27th International Conference on Parallel Architectures and Compilation Techniques (PACT ’18)  
+  - ID: 5
+    title: Attributed Consistent Hashing for Heterogeneous Storage Systems
+    time: Nov 2018
+    location: the 27th International Conference on Parallel Architectures and Compilation Techniques(PACT ’18)
+  - ID: 6
+    title: I/O Characteristics Discovery in Cloud Storage Systems
+    time: Jul 2018
+    location: 2018 IEEE International Conference on Cloud Computing(Cloud ’18)  
+  - ID: 7
+    title: AKIN - A Streaming Graph Partitioning Algorithm for Distributed Graph Storage Systems
+    time: May 2018
+    location: 18th IEEE/ACM International Symposium on Cluster, Cloud and Grid Computing (CCGrid’18)  
+- Type: Research Seminar Talks
+  Entries:
+  - ID: 1
+    title: Concurrent Metadata Indexing for Scientific Data Harvesting
+    time: Nov 2020
+  - ID: 2
+    title: Enabling High Throughput Concurrent In-Memory Metadata Indexing for Scientific Data Harvesting
+    time: Aug 2020
+  - ID: 3
+    title: A Data Retention Recommender System for HPC Facilities
+    time: May 2020
+  - ID: 4
+    title: A Recommender System for Promoting Scientific Research Collaboration and Data Sharing
+    time: Mar 2020
+  - ID: 5
+    title: On Scientific Data Discoverability
+    time: Nov 2019
+  - ID: 6
+    title: What Does a Bad Paper Look Like? Some Thoughts After A Paper Review
+    time: Oct 2019
+  - ID: 7
+    title: MIQS - Metadata Indexing and Querying Service for Self-Describing File Formats
+    time: Jun 2019
+  - ID: 8
+    title: Exploring Metadata Search Primitives for Scientific Data Management
+    time: Feb 2019
+  - ID: 9
+    title: Metadata Indexing and Search for Self-contained Scientific Data Management Models
+    time: Nov 2018
+  - ID: 10
+    title: Lightweight Metadata Search Service for Experimental and Observational Datasets
+    time: Sep 2018
+  - ID: 11
+    title: From Index to Metadata
+    time: Apr 2018 
+  - ID: 12
+    title: Distributed Adaptive Radix Tree and Metadata Indexing
+    time: Feb 2018
+  - ID: 13
+    title: Distributed Keyword Search for Metadata
+    time: Dec 2017
+  - ID: 14
+    title: Towards Flexible and Efficient Metadata Search
+    time: Sep 2017
+  - ID: 15
+    title: Data Management for Large-Scale Graph-Oriented Applications
+    time: May 2017 
+  - ID: 16
+    title: A Tutorial on CloudLa
+    time: Jan 2017
+  - ID: 17
+    title: Geospatial Data Mining on Spark and HBase
+    time: Nov 2016
+  - ID: 18
+    title: Similarity-Based Streaming Graph Partitioning for Distributed Graph Storage Systems
+    time: Oct 2016 
+  - ID: 19
+    title: Similarity-Based Graph Data Placement Strategy for Graph-based Applications on HPC
+    time: Jun 2016
+  - ID: 20
+    title: An Online Graph Partitioner for Graph-Based Metadata Management System in High Performance Computing
+    time: Mar 2016
+  - ID: 21
+    title: Data Partitioning on High-Performance Graph Computing System - Motivation, Exploration and Innovation
+    time: Dec 2015
+- Type: Video Presentations
+  Entries:
+  - ID: 1
+    title: Activeness-based Data Retention Recommender for HPC Facilities (A 5-minute audio presentation for ACM Graduate Student Research Competition Poster at SC ’20)
+    time: Nov 2020
+    url: 
+  - ID: 2
+    title: DART - Distributed Adaptive Radix Tree for Efficient Affix-based Keyword Search on HPC Systems (A 3-minute video teaser presentation for technical program presentation at PACT ’18) 
+    time: Oct 2018
+    url: 

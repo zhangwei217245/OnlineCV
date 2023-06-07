@@ -1,0 +1,521 @@
+publications:
+- entries:
+  - ENTRYTYPE: article
+    ID: JAEOG2020RSSOCIAL
+    abstract: "With the advent of \u201Csocial sensing\u201D in the Big Data era,\
+      \ location-based social media (LBSM) data are increasingly used to explore anthropogenic\
+      \ activities and their impacts on the environment. This study converts a typical\
+      \ kind of LBSM data, geo-tagged tweets, into raster images at the 500\u202F\
+      m spatial resolution and compares them with the new generation nighttime lights\
+      \ (NTL) image products, the Visible Infrared Imaging Radiometer Suite (VIIRS)\
+      \ Day/Night Band (DNB) monthly image composites. The results show that the monthly\
+      \ tweet images are significantly correlated with the VIIRS-DNB images at the\
+      \ pixel level. The tweet images have nearly the same ability on estimating electric\
+      \ power consumption and better performance on assessing personal incomes and\
+      \ population than the NTL images. Tweeted areas (i.e. the pixels with at least\
+      \ one posted tweet) are closer to satellite-derived built-up/urban areas than\
+      \ lit areas in NTL imagery, making tweet images an alternative to delimit extents\
+      \ of human activities. Moreover, the monthly tweet images do not show apparent\
+      \ seasonal changes, and the values of tweet images are more stable across different\
+      \ months than VIIRS-DNB monthly image composites. This study explores the potential\
+      \ of LBSM data at relatively fine spatiotemporal resolutions to estimate or\
+      \ map socioeconomic factors as an alternative to NTL images in the United States."
+    author: Zhao, Naizhuo and Cao, Guofeng and Zhang, Wei and Samson, Eric L. and
+      Chen, Yong
+    doi: https://doi.org/10.1016/j.jag.2020.102058
+    issn: 1569-8432
+    journal: International Journal of Applied Earth Observation and Geoinformation
+    keywords: Nighttime lights imagery, Geo-tagged tweets, Socioeconomic factors,
+      Social sensing
+    pages: '102058'
+    title: "Remote sensing and social sensing for socioeconomic systems: A comparison\
+      \ study between nighttime lights and location-based social media at the 500\u202F\
+      m spatial resolution"
+    url: https://www.sciencedirect.com/science/article/pii/S0303243419307688
+    volume: '87'
+    year: '2020'
+  - ENTRYTYPE: article
+    ID: TPDS2019GraphMeta
+    abstract: "High-performance computing (HPC) systems generate huge amounts of metadata\
+      \ about different entities such as jobs, users, and files. Existing systems\
+      \ can efficiently record and manage part of these metadata, mainly the POSIX\
+      \ metadata of data files (e.g., file size, name, and permissions mode). But\
+      \ another important set of metadata, referred to as \u201Crich\u201D metadata\
+      \ in this study, which record not only wider range of entities (e.g., running\
+      \ processes and jobs) but also more complex relationships between them, are\
+      \ mostly missing in current HPC systems. Yet such rich metadata are critical\
+      \ for supporting many advanced data management functions such as identifying\
+      \ data sources and parameters behind a given result; auditing data usage; or\
+      \ understanding details about how inputs are transformed into outputs. To uniformly\
+      \ and efficiently manage the rich metadata generated in HPC systems, We propose\
+      \ to utilize a graph model in this study. We identify the key challenges of\
+      \ implementing such a graph-based HPC rich metadata management system and present\
+      \ GraphMeta, a graph-based rich metadata management system designed and optimized\
+      \ for HPC platforms, to tackle these challenges. Extensive evaluations on both\
+      \ synthetic and real HPC metadata workloads show its advantages in both performance\
+      \ and scalability compared with existing solutions."
+    author: Dai, Dong and Chen, Yong and Carns, Philip and Jenkins, John and Zhang,
+      Wei and Ross, Robert
+    doi: 10.1109/TPDS.2018.2887380
+    issn: 1558-2183
+    journal: IEEE Transactions on Parallel and Distributed Systems
+    keywords: ''
+    month: July
+    number: '7'
+    pages: 1613-1627
+    title: Managing Rich Metadata in High-Performance Computing Systems Using a Graph
+      Model
+    url: https://ieeexplore.ieee.org/abstract/document/8580412
+    volume: '30'
+    year: '2019'
+  - ENTRYTYPE: article
+    ID: TGRS2019NTLSOCIAL
+    abstract: "Location-based social media have been extensively utilized in the concept\
+      \ of \u201Csocial sensing\u201D to exploit dynamic information about human activities,\
+      \ yet joint uses of social sensing and remote sensing images are underdeveloped\
+      \ at present. In this paper, the close relationship between the number of Twitter\
+      \ users and brightness of nighttime lights (NTL) over the contiguous United\
+      \ States is calculated and geotagged tweets are then used to upsample a stable\
+      \ light image for 2013. An associated outcome of the upsampling process is the\
+      \ solution of two major problems existing in the NTL image, pixel saturation,\
+      \ and blooming effects. Compared with the original stable light image, digital\
+      \ number (DN) values of the upsampled stable light image have larger correlation\
+      \ coefficients with gridded population (0.47 versus 0.09) and DN values of the\
+      \ new generation NTL image product (0.56 versus 0.52), i.e., the Visible Infrared\
+      \ Imaging Radiometer Suite day/night band image composite. In addition, total\
+      \ personal incomes of states are disaggregated to each pixel in proportion to\
+      \ the DN value of the pixel in the NTL images and then aggregate by counties.\
+      \ Personal incomes distributed by the upsampled NTL image are closer to the\
+      \ official demographic data than those distributed by the original stable light\
+      \ image. All of these results explore the potential of geotagged tweets to improve\
+      \ the quality of NTL images for more accurately estimating or mapping socioeconomic\
+      \ factors."
+    author: Zhao, Naizhuo and Zhang, Wei and Liu, Ying and Samson, Eric L. and Chen,
+      Yong and Cao, Guofeng
+    doi: 10.1109/TGRS.2018.2871788
+    issn: 1558-0644
+    journal: IEEE Transactions on Geoscience and Remote Sensing
+    keywords: ''
+    month: April
+    number: '4'
+    pages: 2161-2172
+    title: Improving Nighttime Light Imagery With Location-Based Social Media Data
+    url: https://ieeexplore.ieee.org/abstract/document/8506604
+    volume: '57'
+    year: '2019'
+  - ENTRYTYPE: article
+    ID: JPRS2018TweetNL
+    abstract: "Nighttime lights (NTL) imagery is one of the most commonly used tools\
+      \ to quantitatively study socioeconomic systems over large areas. In this study\
+      \ we aim to use location-based social media big data to challenge the primacy\
+      \ of NTL imagery on estimating socioeconomic factors. Geo-tagged tweets posted\
+      \ in the contiguous United States in 2013 were retrieved to produce a tweet\
+      \ image with the same spatial resolution of the NTL imagery (i.e., 0.00833\xB0\
+      \u202F\xD7\u202F0.00833\xB0). Sum tweet (the total number of tweets) and sum\
+      \ light (summed DN value of the NTL image) of each state or county were obtained\
+      \ from the tweets and the NTL images, respectively, to estimate three important\
+      \ socioeconomic factors: personal income, electric power consumption, and fossil\
+      \ fuel carbon dioxide emissions. Results show that sum tweet is a better measure\
+      \ of personal income and electric power consumption while carbon dioxide emissions\
+      \ can be more accurately estimated by sum light. We further exploited that African-Americans\
+      \ adults are more likely than White seniors to post geotagged tweets in the\
+      \ US, yet did not find any significant correlations between proportions of the\
+      \ subpopulations and the estimation accuracy of the socioeconomic factors. Existence\
+      \ of saturated pixels and blooming effects and failure to remove gas flaring\
+      \ reduce quality of NTL imagery in estimating socioeconomic factors, however,\
+      \ such problems are nonexistent in the tweet images. This study reveals that\
+      \ the number of geo-tagged tweets has great potential to be deemed as a substitute\
+      \ of brightness of NTL to assess socioeconomic factors over large geographic\
+      \ areas."
+    author: Zhao, Naizhuo and Cao, Guofeng and Zhang, Wei and Samson, Eric L.
+    doi: https://doi.org/10.1016/j.isprsjprs.2018.08.018
+    issn: 0924-2716
+    journal: ISPRS Journal of Photogrammetry and Remote Sensing
+    keywords: Nighttime lights imagery, Twitter, Socioeconomic factors, Location-based
+      social media, The United States
+    pages: 1-10
+    title: 'Tweets or nighttime lights: Comparison for preeminence in estimating socioeconomic
+      factors'
+    url: https://www.sciencedirect.com/science/article/pii/S0924271618302375
+    volume: '146'
+    year: '2018'
+  pub_type: Journal Papers
+- entries:
+  - ENTRYTYPE: inproceedings
+    ID: HPEC2022Kv2vec
+    abstract: Distributed representation methods for words have been developed for
+      years, and numerous methods exist, such as word2vec, GloVe, and fastText. However,
+      they are not designed for key-value pairs, which is an important data pattern
+      and widely used in many scenarios. For example, metadata attributes of scientific
+      files consist of a collection of key-value pairs. In this research, we propose
+      kv2vec, a method that captures relationships between keys and values and represents
+      key-value pairs in dense vectors. The fundamental idea of the kv2vec method
+      is utilizing recurrent neural networks (RNNs) with long short-term memory (LSTM)
+      hidden units to convert each key-value pair to a distributed vector representation.
+      This new method overcomes the weaknesses of existing embedding models for representing
+      key-value pairs as vectors. Moreover, it can be integrated into dataset search
+      solutions through querying metadata attributes for self-describing file formats
+      that are widely used in HPC systems. We evaluate the kv2vec method with multiple
+      real-world datasets, and the results show that kv2vec outperforms existing models.
+    author: Niu, Chenxu and Zhang, Wei and Byna, Suren and Chen, Yong
+    booktitle: Proceedings of 2022 IEEE High Performance Extreme Computing Conference
+    doi: 10.1109/HPEC55821.2022.9926389
+    issn: 2643-1971
+    keywords: ''
+    month: Sep.
+    note: 'acceptance rate: 30/120=25\%'
+    number: ''
+    pages: 1-7
+    series: HPEC '22
+    title: 'Kv2vec: A Distributed Representation Method for Key-value Pairs from Metadata
+      Attributes'
+    url: https://doi.org/10.1109/HPEC55821.2022.9926389
+    volume: ''
+    year: '2022'
+  - ENTRYTYPE: inproceedings
+    ID: SC2021ActiveDR
+    abstract: HPC systems typically rely on the fixed-lifetime (FLT) data retention
+      strategy, which only considers temporal locality of data accesses to parallel
+      file systems. However, our extensive analysis based on the leadership-class
+      HPC system traces suggests that the FLT approach often fails to capture the
+      dynamics in users' behavior and leads to undesired data purge. In this study,
+      we propose an activeness-based data retention (ActiveDR) solution, which advocates
+      considering the data retention approach from a holistic activeness-based perspective.
+      By evaluating the frequency and impact of users' activities, ActiveDR prioritizes
+      the file purge process for inactive users and rewards active users with extended
+      file lifetime on parallel storage. Our extensive evaluations based on the traces
+      of the prior Titan supercomputer show that, when reaching the same purge target,
+      ActiveDR achieves up to 37% file miss reduction as compared to the current FLT
+      retention methodology.
+    address: New York, NY, USA
+    articleno: '102'
+    author: Zhang, Wei and Byna, Suren and Sim, Hyogi and Lee, Sangkeun and Vazhkudai,
+      Sudharshan and Chen, Yong
+    booktitle: Proceedings of the International Conference for High Performance Computing,
+      Networking, Storage and Analysis
+    doi: 10.1145/3458817.3476201
+    isbn: '9781450384421'
+    keywords: storage resource management, user behavior, purge policy, storage tiering,
+      data retention, data management
+    location: St. Louis, Missouri
+    note: "first-around acceptance rate: 86/365=23.6\\%, another 13 papers being asked\
+      \ for major revisions per SC\u201921"
+    numpages: '14'
+    publisher: Association for Computing Machinery
+    series: SC '21
+    title: Exploiting User Activeness for Data Retention in HPC Systems
+    url: https://doi.org/10.1145/3458817.3476201
+    year: '2021'
+  - ENTRYTYPE: inproceedings
+    ID: HiPC2019Metadata
+    abstract: Scientific experiments and observations store massive amounts of data
+      in various scientific file formats. Metadata, which describes the characteristics
+      of the data, is commonly used to sift through massive datasets in order to locate
+      data of interest to scientists. Several indexing data structures (such as hash
+      tables, trie, self-balancing search trees, sparse array, etc.) have been developed
+      as part of efforts to provide an efficient method for locating target data.
+      However, efficient determination of an indexing data structure remains unclear
+      in the context of scientific data management, due to the lack of investigation
+      on metadata, metadata queries, and corresponding data structures. In this study,
+      we perform a systematic study of the metadata search essentials in the context
+      of scientific data management. We study a real-world astronomy observation dataset
+      and explore the characteristics of the metadata in the dataset. We also study
+      possible metadata queries based on the discovery of the metadata characteristics
+      and evaluate different data structures for various types of metadata attributes.
+      Our evaluation on real-world dataset suggests that trie is a suitable data structure
+      when prefix/suffix query is required, otherwise hash table should be used. We
+      conclude our study with a summary of our findings. These findings provide a
+      guideline and offers insights in developing metadata indexing methodologies
+      for scientific applications.
+    author: Zhang, Wei and Byna, Suren and Niu, Chenxu and Chen, Yong
+    booktitle: Proceedings of 2019 IEEE 26th International Conference on High Performance
+      Computing, Data, and Analytics
+    doi: 10.1109/HiPC.2019.00021
+    issn: 2640-0316
+    keywords: ''
+    month: Dec
+    note: 'acceptance rate: 23\%'
+    number: ''
+    pages: 83-92
+    series: HiPC '19
+    title: Exploring Metadata Search Essentials for Scientific Data Management
+    url: https://doi.ieeecomputersociety.org/10.1109/HiPC.2019.00021
+    volume: ''
+    year: '2019'
+  - ENTRYTYPE: inproceedings
+    ID: SC2019MIQS
+    abstract: Scientific applications often store datasets in self-describing data
+      file formats, such as HDF5 and netCDF. Regrettably, to efficiently search the
+      metadata within these files remains challenging due to the sheer size of the
+      datasets. Existing solutions extract the metadata and store it in external database
+      management systems (DBMS) to locate desired data. However, this practice introduces
+      significant overhead and complexity in extraction and querying. In this research,
+      we propose a novel <u>M</u>etadata <u>I</u>ndexing and <u>Q</u>uerying <u>S</u>ervice
+      (MIQS), which removes the external DBMS and utilizes in-memory index to achieve
+      efficient metadata searching. MIQS follows the self-contained data management
+      paradigm and provides portable and schema-free metadata indexing and querying
+      functionalities for self-describing file formats. We have evaluated MIQS with
+      the state-of-the-art MongoDB-based metadata indexing solution. MIQS achieved
+      up to 99% time reduction in index construction and up to 172kx search performance
+      improvement with up to 75% reduction in memory footprint.
+    address: New York, NY, USA
+    articleno: '5'
+    author: Zhang, Wei and Byna, Suren and Tang, Houjun and Williams, Brody and Chen,
+      Yong
+    booktitle: Proceedings of the International Conference for High Performance Computing,
+      Networking, Storage and Analysis
+    doi: 10.1145/3295500.3356146
+    isbn: '9781450362290'
+    keywords: metadata search, HDF5 metadata management
+    location: Denver, Colorado
+    note: 'first-around acceptance rate: 72/344=21\%, another 15 papers being asked
+      for major revisions per SC ''19'
+    numpages: '24'
+    publisher: Association for Computing Machinery
+    series: SC '19
+    title: 'MIQS: Metadata Indexing and Querying Service for Self-Describing File
+      Formats'
+    url: https://doi.org/10.1145/3295500.3356146
+    year: '2019'
+  - ENTRYTYPE: inproceedings
+    ID: PACT2018DART
+    abstract: Affix-based search is a fundamental functionality for storage systems.
+      It allows users to find desired datasets, where attributes of a dataset match
+      an affix. While building inverted index to facilitate efficient affix-based
+      keyword search is a common practice for standalone databases and for desktop
+      file systems, building local indexes or adopting indexing techniques used in
+      a standalone data store is insufficient for high-performance computing (HPC)
+      systems due to the massive amount of data and distributed nature of the storage
+      devices within a system. In this paper, we propose Distributed Adaptive Radix
+      Tree (DART), to address the challenge of distributed affix-based keyword search
+      on HPC systems. This trie-based approach is scalable in achieving efficient
+      affix-based search and alleviating imbalanced keyword distribution and excessive
+      requests on keywords at scale. Our evaluation at different scales shows that,
+      comparing with the "full string hashing" use case of the most popular distributed
+      indexing technique - Distributed Hash Table (DHT), DART achieves up to 55\texttimes{}
+      better throughput with prefix search and with suffix search, while achieving
+      comparable throughput with exact and infix searches. Also, comparing to the
+      "initial hashing" use case of DHT, DART maintains a balanced keyword distribution
+      on distributed nodes and alleviates excessive query workload against popular
+      keywords.
+    address: New York, NY, USA
+    articleno: '24'
+    author: Zhang, Wei and Tang, Houjun and Byna, Suren and Chen, Yong
+    booktitle: Proceedings of the 27th International Conference on Parallel Architectures
+      and Compilation Techniques
+    doi: 10.1145/3243176.3243207
+    isbn: '9781450359863'
+    keywords: distributed inverted index, distributed affix search, distributed search
+    location: Limassol, Cyprus
+    note: 'acceptance rate: 36/126=28.6\%'
+    numpages: '12'
+    publisher: Association for Computing Machinery
+    series: PACT '18
+    title: 'DART: Distributed Adaptive Radix Tree for Efficient Affix-Based Keyword
+      Search on HPC Systems'
+    url: https://doi.org/10.1145/3243176.3243207
+    year: '2018'
+  - ENTRYTYPE: inproceedings
+    ID: CCGRID2018AKIN
+    abstract: Many graph-related applications face the challenge of managing excessive
+      and ever-growing graph data in a distributed environment. Therefore, it is necessary
+      to consider a graph partitioning algorithm to distribute graph data onto multiple
+      machines as the data comes in. Balancing data distribution and minimizing edge-cut
+      ratio are two basic pursuits of the graph partitioning problem. While achieving
+      balanced partitions for streaming graphs is easy, existing graph partitioning
+      algorithms either fail to work on streaming workloads, or leave edge-cut ratio
+      to be further improved. Our research aims to provide a better solution that
+      fits the need of streaming graph partitioning in a distributed system, which
+      further reduces the edge-cut ratio while maintaining rough balance among all
+      partitions. We exploit the similarity measure on the degree of vertices to gather
+      structuralrelated vertices in the same partition as much as possible, this reduces
+      the edge-cut ratio even further as compared to the state-of-the-art streaming
+      graph partitioning algorithm - FENNEL. Our evaluation shows that our streaming
+      graph partitioning algorithm is able to achieve better partitioning quality
+      in terms of edge-cut ratio (up to 20% reduction as compared to FENNEL) while
+      maintaining decent balance between all partitions, and such improvement applies
+      to various real-life graphs.
+    author: Zhang, Wei and Chen, Yong and Dai, Dong
+    booktitle: Proceedings of 2018 18th IEEE/ACM International Symposium on Cluster,
+      Cloud and Grid Computing
+    doi: 10.1109/CCGRID.2018.00033
+    issn: ''
+    keywords: ''
+    month: May
+    note: 'acceptance rate: 20.8\%'
+    number: ''
+    pages: 183-192
+    series: CCGRID '18
+    title: 'AKIN: A Streaming Graph Partitioning Algorithm for Distributed Graph Storage
+      Systems'
+    url: https://par.nsf.gov/servlets/purl/10064689
+    volume: ''
+    year: '2018'
+  - ENTRYTYPE: inproceedings
+    ID: HPDC2017IOGP
+    abstract: Graphs have become increasingly important in many applications and domains
+      such as querying relationships in social networks or managing rich metadata
+      generated in scientific computing. Many of these use cases require high-performance
+      distributed graph databases for serving continuous updates from clients and,
+      at the same time, answering complex queries regarding the current graph. These
+      operations in graph databases, also referred to as online transaction processing
+      (OLTP) operations, have specific design and implementation requirements for
+      graph partitioning algorithms. In this research, we argue it is necessary to
+      consider the connectivity and the vertex degree changes during graph partitioning.
+      Based on this idea, we designed an Incremental Online Graph Partitioning (IOGP)
+      algorithm that responds accordingly to the incremental changes of vertex degree.
+      IOGP helps achieve better locality, generate balanced partitions, and increase
+      the parallelism for accessing high-degree vertices of the graph. Over both real-world
+      and synthetic graphs, IOGP demonstrates as much as 2x better query performance
+      with a less than 10% overhead when compared against state-of-the-art graph partitioning
+      algorithms.
+    address: New York, NY, USA
+    author: Dai, Dong and Zhang, Wei and Chen, Yong
+    booktitle: Proceedings of the 26th International Symposium on High-Performance
+      Parallel and Distributed Computing
+    doi: 10.1145/3078597.3078606
+    isbn: '9781450346993'
+    keywords: graph database, distributed storage, oltp, graph partitioning
+    location: Washington, DC, USA
+    note: 'acceptance rate: 19\%'
+    numpages: '12'
+    pages: "219\u2013230"
+    publisher: Association for Computing Machinery
+    series: HPDC '17
+    title: 'IOGP: An Incremental Online Graph Partitioning Algorithm for Distributed
+      Graph Databases'
+    url: https://doi.org/10.1145/3078597.3078606
+    year: '2017'
+  - ENTRYTYPE: inproceedings
+    ID: CLUSTER2016GraphMeta
+    abstract: High-performance computing (HPC) systems face increasingly critical
+      metadata management challenges, especially in the approaching exascale era.
+      These challenges arise not only from exploding metadata volumes but also from
+      increasingly diverse metadata, which contains data provenance and user-defined
+      attributes in addition to traditional POSIX metadata. This "rich" metadata is
+      critical to support many advanced data management functionality such as data
+      auditing and validation. In our prior work, we presented a graph-based model
+      that could be a promising solution to uniformly manage such rich metadata because
+      of its flexibility and generality. At the same time, however, graph-based rich
+      metadata management introduces significant challenges. In this study, we first
+      identify the challenges presented by the underlying infrastructure in supporting
+      scalable, high-performance rich metadata management. To tackle these challenges,
+      we then present GraphMeta, a graph-based engine designed for managing large-scale
+      rich metadata. We also utilize a series of optimizations designed for rich metadata
+      graphs. We evaluate GraphMeta with both synthetic and real HPC metadata workloads
+      and compare it with other approaches. The results show that its advantages in
+      terms of rich metadata management in HPC systems, including better performance
+      and scalability compared with existing solutions.
+    author: Dai, Dong and Chen, Yong and Carns, Philip and Jenkins, John and Zhang,
+      Wei and Ross, Robert
+    booktitle: Proceedings of 2016 IEEE International Conference on Cluster Computing
+    doi: 10.1109/CLUSTER.2016.50
+    issn: 2168-9253
+    keywords: ''
+    month: Sep.
+    note: 'acceptance rate: 39/162=24.1\%'
+    number: ''
+    pages: 298-307
+    series: CLUSTER '16
+    title: 'GraphMeta: A Graph-Based Engine for Managing Large-Scale HPC Rich Metadata'
+    url: https://doi.ieeecomputersociety.org/10.1109/HiPC.2019.00021
+    volume: ''
+    year: '2016'
+  pub_type: Conference Papers
+- entries:
+  - ENTRYTYPE: misc
+    ID: osti_1772233
+    abstract: In this research, we propose a novel Metadata Indexing and Querying
+      for Self-describing formats (MIQS), which removes the external DBMS and utilizes
+      in-memory index to achieve efficient metadata searching. MIQS follows the self-contained
+      data management paradigm and provides portable and schema-free metadata indexing
+      and querying functionalities for self-describing file formats. We have evaluated
+      MIQS with the state-of-the-art MongoDB-based metadata indexing solution. MIQS
+      achieved up to 99% time reduction in index construction and up to 172,000X search
+      performance improvement with up to 75% reduction in memory footprint.
+    author: Zhang, Wei and Byna, Suren and Chen, Yong and National Science Foundation
+      and USDOE and National Science Foundation and National Science Foundation
+    doi: 10.11578/dc.20210323.1
+    month: '8'
+    title: MIQS v0.6
+    url: https://www.osti.gov/biblio/1772233
+    year: '2020'
+  - ENTRYTYPE: misc
+    ID: SC2021ActiveDRSoftware
+    abstract: This software implements the algorithms described in the article "Exploiting
+      User Activeness for Data Retention in HPC Systems" published in the Proceedings
+      of the International Conference for High Performance Computing, Networking,
+      Storage, and Analysis (SC '21).
+    author: Zhang, Wei and and Sim, Hyogi and Lee, Sangkeun and Byna, Suren and Chen,
+      Yong and Vazhkudai, Sudharshan
+    publisher: Association for Computing Machinery
+    title: Implementation of the Article "Exploiting User Activeness for Data Retention
+      in HPC Systems"
+    url: https://doi.org/10.5281/zenodo.5168853
+    year: '2021'
+  pub_type: Software Releases
+- entries:
+  - ENTRYTYPE: phdthesis
+    ID: zhang2021efficient
+    abstract: Scientific experiments and observations store massive amounts of data
+      in various scientific file formats. Among these file formats, self-describing
+      formats allow storing metadata to describe data objects. As a result, self-describing
+      file formats are commonly used by scientists for sifting through the massive
+      data and locating the data of interest...
+    author: Zhang, Wei
+    school: Texas Tech University
+    title: Efficient scientific data discovery over self-describing file formats
+    url: https://hdl.handle.net/2346/88265
+    year: '2021'
+  pub_type: Thesis and Dissertation
+- entries:
+  - ENTRYTYPE: inproceedings
+    ID: byna2020searching
+    author: Byna, Suren and Koziol, Quincey and Tang, Houjun and Zhang, Wei and Chen,
+      Yong
+    booktitle: AGU Fall Meeting Abstracts
+    pages: H159--03
+    title: Searching metadata stored in self-describing file formats efficiently
+    volume: '2020'
+    year: '2020'
+  pub_type: Extended Abstracts
+- entries:
+  - ENTRYTYPE: article
+    ID: SC2020SRCPOSTER
+    author: Zhang, Wei
+    series: SC '20 ACM Graduate Student Research Competition Poster
+    title: Activeness-based Data Retention Recommender for HPC Facilities
+    year: '2020'
+  - ENTRYTYPE: inproceedings
+    ID: SC2020DSPOSTER
+    author: Zhang, Wei
+    series: SC '20 Doctoral Showcase Poster
+    title: Efficient Metadata Search for Scientific Data
+    year: '2020'
+  - ENTRYTYPE: inproceedings
+    ID: SC2020RSPOSTER
+    author: Niu, Chenxu and Zhang, Wei and Byna, Suren and Chen, Yong
+    series: SC '20 Research Poster
+    title: Semantic Search for Self-Describing Scientific Data Formats
+    year: '2020'
+  - ENTRYTYPE: inproceedings
+    ID: SC2018RSPOSTER
+    author: Zhang, Wei and Tang, Houjun and Byna, Suren and Chen, Yong
+    series: SC '18 Research Poster
+    title: Distributed Adaptive Radix Tree for Efficient Metadata Search on HPC Systems
+    year: '2018'
+  - ENTRYTYPE: inproceedings
+    ID: CCGRID2018RSPOSTER
+    author: Zhang, Wei and Chen, Yong and Dai, Dong
+    series: CCGRID '18 Research Poster
+    title: 'AKIN: A Streaming Graph Partitioning Algorithm for Distributed Graph Storage
+      Systems'
+    year: '2018'
+  - ENTRYTYPE: inproceedings
+    ID: PPOPP2017POSTER
+    author: Dai, Dong and Zhang, Wei and Chen, Yong
+    series: PPoPP '17 Research Poster
+    title: 'POSTER: IOGP: An Incremental Online Graph Partitioning for Large-Scale
+      Distributed Graph Databases'
+    year: '2017'
+  pub_type: Posters

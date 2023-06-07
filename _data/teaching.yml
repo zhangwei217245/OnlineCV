@@ -1,0 +1,30 @@
+categories:
+- Type: Graduate Courses
+  Entries:
+  - ID: 1 
+    course: Parallel Computing
+    title: Invited Lecturer
+    location: Texas Tech University
+    type: Graduate Course
+  - ID: 2
+    course: Advanced Operating Systems
+    title: Course Project Designer and Mentor
+    location: Texas Tech University
+    type: Graduate Course
+- Type: Undergraduate Courses
+  Entries:
+  - ID: 1
+    course: Data Structures
+    title: Lab Instructor, Grader and Tutoring Session Host
+    location: Texas Tech University
+    type: Undergraduate Course
+  - ID: 2
+    course: Object Oriented Programming
+    title: Grader and Tutoring Session Host
+    location: Texas Tech University
+    type: Undergraduate Course
+  - ID: 3
+    course: Computer Architecture
+    title: Grader and Tutoring Session Host
+    location: Texas Tech University
+    type: Undergraduate Course

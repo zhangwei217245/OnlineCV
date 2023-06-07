@@ -1,0 +1,84 @@
+experience:
+  - title: Postdoctoral Researcher
+    category: Research
+    duration: Mar/01/2023 - Now
+    company: Lawrence Berkeley National Laboratory
+    description:
+      - Evaluation and Enhancement of Metadata Indexing and Querying in Proactive Data Container - Led a comprehensive testing and benchmarking exercise on metadata retrieval and querying capabilities within the Proactive Data Container project. This process involved identifying and subsequently addressing performance gaps to optimize metadata retrieval and querying operations, demonstrating robust research acumen and professional competency.
+      - Advancement in LLSM Multi-Dimensional Data Stitching - Led the design and execution of lattice light-sheet microscopy data processing applications, leveraging the Proactive Data Container infrastructure.
+  - title: Senior Member of Technical Staff
+    category: Industry
+    duration: July/12/2021 - Feb/28/2023
+    company: Oracle Corporation
+    description: 
+      - Led the design and implementation of OCI Data Catalog Metastore Integration with OCI Big Data Service, overseeing various critical project aspects such as components orchestration, service integration, security, and test automation.
+      - Orchestrated the design and optimization of the Active Directory Integration project for the AuthN/AuthZ modules in OCI Big Data Service, encompassing activities such as collecting use cases, conducting use case analysis, planning roadmaps, and developing proof of concepts for best practices.
+      - Led the design and implementation of the UID/GID coordinating service for the Cluster, ensuring efficient and reliable coordination processes.
+      - Spearheaded the design and implementation of the security management module within the Generic Kerberos and Active Directory Configuration Framework for OCI Big Data Cluster, strengthening the cluster management system.
+      - Directed the design and implementation of external service integration framework in the Cluster Profile project of OCI Big Data Service, focusing on metadata-driven module access control on different cluster profiles.
+  - title: Research Assistant
+    category: Research
+    duration: Aug/21/2017 - May/15/2021
+    company: Data-Intensive Scalable Computing Laboratory (<a href="https://discl.cs.ttu.edu/doku.php?id=home" target="_blank">DISCL</a>), Texas Tech University
+    description: 
+      - Developed and implemented an innovative solution for exploiting user activeness to optimize data retention in HPC Systems.
+      - Designed and deployed a Metadata Indexing and Querying Service to efficiently handle self-describing data formats.
+      - Created a Distributed Adaptive Radix Tree for affix-based keyword search, enhancing search capabilities in distributed systems.
+      - Led the development of a successful NSF funding proposal, showcasing expertise in grant writing and research project management.
+      - Mentored and provided guidance to a junior Ph.D. student, offering support and fostering their academic and research growth.
+      - Presented a groundbreaking Similarity-based Streaming Graph Partitioning Algorithm for Distributed Graph Storage Systems at CCGrid '18 conference.
+      - Conducted research and presented findings on the importance of Metadata Search Essentials for Scientific Data Management at HiPC '19 conference.
+      - > 
+        Two software releases: 
+          <ul style="list-style-type: circle;">
+            <li><a href="https://doi.org/10.5281/zenodo.5168853" target="_blank">ActiveDR</a> - software release of SC '21 study (DOI: 10.5281/zenodo.5168853)</li>
+            <li><a href="https://doi.org/10.11578/dc.20210322.3" target="_blank">MIQS</a> - software release of SC '19 study (DOI: 10.11578/dc.20210322.3)</li>
+          </ul>
+  - title: Research Assistant
+    category: Research
+    duration: Jan/20/2016 - Dec/15/2016
+    company: "<a href=\"http://www.gis.ttu.edu/starlab/\" target=\"_blank\">STARLab</a>, Texas Tech University"
+    description:
+      - Development of a comprehensive data mining infrastructure leveraging Spark, HBase, and HDFS.
+      - Execution of strategic optimizations, with a particular focus on unified data compression across the full spectrum of big data software stack.
+      - Deployment of geo-spatial visualization for the distribution of social media users, employing GDAL in conjunction with NodeJS, Python, and Redis.
+      - Conducted a thorough sentiment analysis on a dataset spanning five years of Twitter activity related to presidential election results.
+      - Advanced demographic information extraction conducted through geo-spatial analysis of Twitter data utilizing technologies such as Apache Spark, HBase, and Hadoop.
+      - Initiated a comparative study titled "Remote Sensing and Social Sensing for Socioeconomic Systems" examining the differences between Nighttime Lights and Location-based Social Media with a spatial resolution of 500 meters.
+      - Undertook a project aimed at augmenting Nighttime Light Imagery through the incorporation of Location-Based Social Media Data.
+      - Produced a comprehensive analysis titled "Tweets or Nighttime Lights - A Comparative Examination for Supremacy in Estimating Socioeconomic Factors".
+  - title: Senior System R&D Engineer
+    category: Industry
+    duration: Jan/24/2014 - Jan/14/2016
+    company: Beijing Serious Technology Co., Ltd
+    description: 
+      - Designed and built Meshwork, a graph-like data access API, supporting both MySQL and Redis, for seamless and optimized data retrieval.
+      - Designed and built BrookSide, a message processing framework for AMQP, specifically RabbitMQ, to enable efficient and reliable communication.
+      - Led on the Webshot-rest-amqp-service project, a NodeJS application responsible for capturing website snapshots based on messages received from AMQP implementations like RabbitMQ.
+      - Led the development of PCVF, a Parameter Constraining and Validating Framework for RESTful Web Service APIs, as part of a confidential project.
+      - Guided DevOps practices involving Maven, Jenkins, Unit Testing, and a customized document generator to support RESTful Web Service APIs, ensuring compatibility with the PCVF framework.
+  - title: System R&D Engineer
+    category: Industry
+    duration: Jul/20/2010 - May/20/2013
+    company: Sina.com Technology (China) Co.,Ltd.
+    description: 
+      - Optimized Weibo REST API for enhanced user experience, leading to the development of a BDD Testing Tool, specification for Weibo Open API documentation, and specification for Weibo Open API implementation.
+      - Implemented T.cn, a URL shortening service, along with a program to track URL hits.
+      - Managed the user data service for Weibo Open API, a critical data access path, ensuring high performance, availability, and adaptability to changing functionality.
+      - Led the migration of data and services for User Service v2.0 within Weibo Open API, including the development of a distributed data service and message processing system.
+      - Improved cache service performance for User Service v2.0 by conducting thorough analysis and reducing Memcache resource usage.
+      - Designed and implemented a visualized service monitoring system to track the running status of the user service, including cache hit ratio, MySQL throughput, and critical user-related services such as Relationship Service and Feed Service.
+  - title: Senior Software Developer
+    category: Industry
+    duration: Feb/15/2009 - Jun/15/2010
+    company: Beijing JustMusic Co.,Ltd.
+    description:   
+      - Spearheaded the end-to-end development of a sophisticated business data management system, leveraging software engineering expertise to ensure efficient data handling, storage, and retrieval.
+      - Designed and implemented a streamlined batch processing framework, enabling seamless execution of data processing tasks and optimizing system performance for enhanced productivity.
+  - title: Software Developer
+    category: Industry
+    duration: Jan/15/2008 - Jan/04/2009
+    company: Beijing Datuu.com Technology Co.,Ltd.
+    description:
+      - Developed an operation management system, taking charge of routine feature development, data maintenance, and ensuring seamless integration of essential functionalities.
+      - Implemented a robust business reporting module within the operation management system, enabling accurate and timely generation of business reports to facilitate informed decision-making  

@@ -1,0 +1,154 @@
+@INPROCEEDINGS{HPEC2022Kv2vec,
+  author={Niu, Chenxu and Zhang, Wei and Byna, Suren and Chen, Yong},
+  booktitle={Proceedings of 2022 IEEE High Performance Extreme Computing Conference}, 
+  title={Kv2vec: A Distributed Representation Method for Key-value Pairs from Metadata Attributes}, 
+  year={2022},
+  volume={},
+  number={},
+  pages={1-7},
+  abstract={Distributed representation methods for words have been developed for years, and numerous methods exist, such as word2vec, GloVe, and fastText. However, they are not designed for key-value pairs, which is an important data pattern and widely used in many scenarios. For example, metadata attributes of scientific files consist of a collection of key-value pairs. In this research, we propose kv2vec, a method that captures relationships between keys and values and represents key-value pairs in dense vectors. The fundamental idea of the kv2vec method is utilizing recurrent neural networks (RNNs) with long short-term memory (LSTM) hidden units to convert each key-value pair to a distributed vector representation. This new method overcomes the weaknesses of existing embedding models for representing key-value pairs as vectors. Moreover, it can be integrated into dataset search solutions through querying metadata attributes for self-describing file formats that are widely used in HPC systems. We evaluate the kv2vec method with multiple real-world datasets, and the results show that kv2vec outperforms existing models.},
+  keywords={},
+  doi={10.1109/HPEC55821.2022.9926389},
+  ISSN={2643-1971},
+  month={Sep.},
+  url={https://doi.org/10.1109/HPEC55821.2022.9926389},
+  series={HPEC '22},
+  note={acceptance rate: 30/120=25\%}
+  }
+
+
+@inproceedings{SC2021ActiveDR,
+author = {Zhang, Wei and Byna, Suren and Sim, Hyogi and Lee, Sangkeun and Vazhkudai, Sudharshan and Chen, Yong},
+title = {Exploiting User Activeness for Data Retention in HPC Systems},
+year = {2021},
+isbn = {9781450384421},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3458817.3476201},
+doi = {10.1145/3458817.3476201},
+abstract = {HPC systems typically rely on the fixed-lifetime (FLT) data retention strategy, which only considers temporal locality of data accesses to parallel file systems. However, our extensive analysis based on the leadership-class HPC system traces suggests that the FLT approach often fails to capture the dynamics in users' behavior and leads to undesired data purge. In this study, we propose an activeness-based data retention (ActiveDR) solution, which advocates considering the data retention approach from a holistic activeness-based perspective. By evaluating the frequency and impact of users' activities, ActiveDR prioritizes the file purge process for inactive users and rewards active users with extended file lifetime on parallel storage. Our extensive evaluations based on the traces of the prior Titan supercomputer show that, when reaching the same purge target, ActiveDR achieves up to 37% file miss reduction as compared to the current FLT retention methodology.},
+booktitle = {Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis},
+articleno = {102},
+numpages = {14},
+keywords = {storage resource management, user behavior, purge policy, storage tiering, data retention, data management},
+location = {St. Louis, Missouri},
+series = {SC '21},
+note = {first-around acceptance rate: 86/365=23.6\%, another 13 papers being asked for major revisions per SC’21}
+}
+
+
+@INPROCEEDINGS{HiPC2019Metadata,
+  author={Zhang, Wei and Byna, Suren and Niu, Chenxu and Chen, Yong},
+  booktitle={Proceedings of 2019 IEEE 26th International Conference on High Performance Computing, Data, and Analytics}, 
+  title={Exploring Metadata Search Essentials for Scientific Data Management}, 
+  year={2019},
+  volume={},
+  number={},
+  pages={83-92},
+  abstract={Scientific experiments and observations store massive amounts of data in various scientific file formats. Metadata, which describes the characteristics of the data, is commonly used to sift through massive datasets in order to locate data of interest to scientists. Several indexing data structures (such as hash tables, trie, self-balancing search trees, sparse array, etc.) have been developed as part of efforts to provide an efficient method for locating target data. However, efficient determination of an indexing data structure remains unclear in the context of scientific data management, due to the lack of investigation on metadata, metadata queries, and corresponding data structures. In this study, we perform a systematic study of the metadata search essentials in the context of scientific data management. We study a real-world astronomy observation dataset and explore the characteristics of the metadata in the dataset. We also study possible metadata queries based on the discovery of the metadata characteristics and evaluate different data structures for various types of metadata attributes. Our evaluation on real-world dataset suggests that trie is a suitable data structure when prefix/suffix query is required, otherwise hash table should be used. We conclude our study with a summary of our findings. These findings provide a guideline and offers insights in developing metadata indexing methodologies for scientific applications.},
+  keywords={},
+  doi={10.1109/HiPC.2019.00021},
+  ISSN={2640-0316},
+  month={Dec},
+  url={https://doi.ieeecomputersociety.org/10.1109/HiPC.2019.00021},
+  series={HiPC '19},
+  note={acceptance rate: 23\%}
+}
+
+
+
+@inproceedings{SC2019MIQS,
+author = {Zhang, Wei and Byna, Suren and Tang, Houjun and Williams, Brody and Chen, Yong},
+title = {MIQS: Metadata Indexing and Querying Service for Self-Describing File Formats},
+year = {2019},
+isbn = {9781450362290},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3295500.3356146},
+doi = {10.1145/3295500.3356146},
+abstract = {Scientific applications often store datasets in self-describing data file formats, such as HDF5 and netCDF. Regrettably, to efficiently search the metadata within these files remains challenging due to the sheer size of the datasets. Existing solutions extract the metadata and store it in external database management systems (DBMS) to locate desired data. However, this practice introduces significant overhead and complexity in extraction and querying. In this research, we propose a novel <u>M</u>etadata <u>I</u>ndexing and <u>Q</u>uerying <u>S</u>ervice (MIQS), which removes the external DBMS and utilizes in-memory index to achieve efficient metadata searching. MIQS follows the self-contained data management paradigm and provides portable and schema-free metadata indexing and querying functionalities for self-describing file formats. We have evaluated MIQS with the state-of-the-art MongoDB-based metadata indexing solution. MIQS achieved up to 99% time reduction in index construction and up to 172kx search performance improvement with up to 75% reduction in memory footprint.},
+booktitle = {Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis},
+articleno = {5},
+numpages = {24},
+keywords = {metadata search, HDF5 metadata management},
+location = {Denver, Colorado},
+series = {SC '19},
+note = {first-around acceptance rate: 72/344=21\%, another 15 papers being asked for major revisions per SC '19}
+}
+
+
+@inproceedings{PACT2018DART,
+author = {Zhang, Wei and Tang, Houjun and Byna, Suren and Chen, Yong},
+title = {DART: Distributed Adaptive Radix Tree for Efficient Affix-Based Keyword Search on HPC Systems},
+year = {2018},
+isbn = {9781450359863},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3243176.3243207},
+doi = {10.1145/3243176.3243207},
+abstract = {Affix-based search is a fundamental functionality for storage systems. It allows users to find desired datasets, where attributes of a dataset match an affix. While building inverted index to facilitate efficient affix-based keyword search is a common practice for standalone databases and for desktop file systems, building local indexes or adopting indexing techniques used in a standalone data store is insufficient for high-performance computing (HPC) systems due to the massive amount of data and distributed nature of the storage devices within a system. In this paper, we propose Distributed Adaptive Radix Tree (DART), to address the challenge of distributed affix-based keyword search on HPC systems. This trie-based approach is scalable in achieving efficient affix-based search and alleviating imbalanced keyword distribution and excessive requests on keywords at scale. Our evaluation at different scales shows that, comparing with the "full string hashing" use case of the most popular distributed indexing technique - Distributed Hash Table (DHT), DART achieves up to 55\texttimes{} better throughput with prefix search and with suffix search, while achieving comparable throughput with exact and infix searches. Also, comparing to the "initial hashing" use case of DHT, DART maintains a balanced keyword distribution on distributed nodes and alleviates excessive query workload against popular keywords.},
+booktitle = {Proceedings of the 27th International Conference on Parallel Architectures and Compilation Techniques},
+articleno = {24},
+numpages = {12},
+keywords = {distributed inverted index, distributed affix search, distributed search},
+location = {Limassol, Cyprus},
+series = {PACT '18},
+note = {acceptance rate: 36/126=28.6\%}
+}
+
+
+@INPROCEEDINGS{CCGRID2018AKIN,
+  author={Zhang, Wei and Chen, Yong and Dai, Dong},
+  booktitle={Proceedings of 2018 18th IEEE/ACM International Symposium on Cluster, Cloud and Grid Computing}, 
+  title={AKIN: A Streaming Graph Partitioning Algorithm for Distributed Graph Storage Systems}, 
+  year={2018},
+  volume={},
+  number={},
+  pages={183-192},
+  abstract={Many graph-related applications face the challenge of managing excessive and ever-growing graph data in a distributed environment. Therefore, it is necessary to consider a graph partitioning algorithm to distribute graph data onto multiple machines as the data comes in. Balancing data distribution and minimizing edge-cut ratio are two basic pursuits of the graph partitioning problem. While achieving balanced partitions for streaming graphs is easy, existing graph partitioning algorithms either fail to work on streaming workloads, or leave edge-cut ratio to be further improved. Our research aims to provide a better solution that fits the need of streaming graph partitioning in a distributed system, which further reduces the edge-cut ratio while maintaining rough balance among all partitions. We exploit the similarity measure on the degree of vertices to gather structuralrelated vertices in the same partition as much as possible, this reduces the edge-cut ratio even further as compared to the state-of-the-art streaming graph partitioning algorithm - FENNEL. Our evaluation shows that our streaming graph partitioning algorithm is able to achieve better partitioning quality in terms of edge-cut ratio (up to 20% reduction as compared to FENNEL) while maintaining decent balance between all partitions, and such improvement applies to various real-life graphs.},
+  keywords={},
+  doi={10.1109/CCGRID.2018.00033},
+  ISSN={},
+  month={May},
+  url={https://par.nsf.gov/servlets/purl/10064689},
+  series = {CCGRID '18},
+  note = {acceptance rate: 20.8\%}
+}
+
+
+@inproceedings{HPDC2017IOGP,
+author = {Dai, Dong and Zhang, Wei and Chen, Yong},
+title = {IOGP: An Incremental Online Graph Partitioning Algorithm for Distributed Graph Databases},
+year = {2017},
+isbn = {9781450346993},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3078597.3078606},
+doi = {10.1145/3078597.3078606},
+abstract = {Graphs have become increasingly important in many applications and domains such as querying relationships in social networks or managing rich metadata generated in scientific computing. Many of these use cases require high-performance distributed graph databases for serving continuous updates from clients and, at the same time, answering complex queries regarding the current graph. These operations in graph databases, also referred to as online transaction processing (OLTP) operations, have specific design and implementation requirements for graph partitioning algorithms. In this research, we argue it is necessary to consider the connectivity and the vertex degree changes during graph partitioning. Based on this idea, we designed an Incremental Online Graph Partitioning (IOGP) algorithm that responds accordingly to the incremental changes of vertex degree. IOGP helps achieve better locality, generate balanced partitions, and increase the parallelism for accessing high-degree vertices of the graph. Over both real-world and synthetic graphs, IOGP demonstrates as much as 2x better query performance with a less than 10% overhead when compared against state-of-the-art graph partitioning algorithms.},
+booktitle = {Proceedings of the 26th International Symposium on High-Performance Parallel and Distributed Computing},
+pages = {219–230},
+numpages = {12},
+keywords = {graph database, distributed storage, oltp, graph partitioning},
+location = {Washington, DC, USA},
+series = {HPDC '17},
+note = {acceptance rate: 19\%}
+}
+
+@INPROCEEDINGS{CLUSTER2016GraphMeta,
+  author={Dai, Dong and Chen, Yong and Carns, Philip and Jenkins, John and Zhang, Wei and Ross, Robert},
+  booktitle={Proceedings of 2016 IEEE International Conference on Cluster Computing}, 
+  title={GraphMeta: A Graph-Based Engine for Managing Large-Scale HPC Rich Metadata}, 
+  year={2016},
+  volume={},
+  number={},
+  pages={298-307},
+  abstract={High-performance computing (HPC) systems face increasingly critical metadata management challenges, especially in the approaching exascale era. These challenges arise not only from exploding metadata volumes but also from increasingly diverse metadata, which contains data provenance and user-defined attributes in addition to traditional POSIX metadata. This "rich" metadata is critical to support many advanced data management functionality such as data auditing and validation. In our prior work, we presented a graph-based model that could be a promising solution to uniformly manage such rich metadata because of its flexibility and generality. At the same time, however, graph-based rich metadata management introduces significant challenges. In this study, we first identify the challenges presented by the underlying infrastructure in supporting scalable, high-performance rich metadata management. To tackle these challenges, we then present GraphMeta, a graph-based engine designed for managing large-scale rich metadata. We also utilize a series of optimizations designed for rich metadata graphs. We evaluate GraphMeta with both synthetic and real HPC metadata workloads and compare it with other approaches. The results show that its advantages in terms of rich metadata management in HPC systems, including better performance and scalability compared with existing solutions.},
+  keywords={},
+  doi={10.1109/CLUSTER.2016.50},
+  ISSN={2168-9253},
+  month={Sep.},
+  url={https://doi.ieeecomputersociety.org/10.1109/HiPC.2019.00021},
+  series = {CLUSTER '16},
+  note = {acceptance rate: 39/162=24.1\%}
+  }
