@@ -1,6 +1,15 @@
 import yaml
 import bibtexparser
 
+'''
+In this script directory, run the following command to generate the YAML file:
+python3 -m venv ./
+source bin/activate
+pip install bibtexparser
+pip install pyyaml
+python publication_generator.py
+'''
+
 # Function to read a bib file and return its entries
 def read_bib_file(filename):
     with open(filename) as bibtex_file:
