@@ -2,282 +2,283 @@
 layout: default
 ---
 
-    <div class="container">
-      <header>
-        <div class="name-wrapper">
-          <div id="fullname" class="title">
-            <strong>{{ site.data.resume.name }}</strong>
-          </div>
-          <div id="jobtitle" class="sub-title">
-            <strong>{{ site.data.resume.jobtitle }}</strong>
-          </div>
-        </div>
-        <div id="contact" class="contact">
-          {% for item in site.data.resume.contact %}
-          <div class="contact-item">
-            {% if item.link %}
-            <a href="{{ item.link }}">
-            {% endif %}
-            <i class="fa {{ item.icon }} aria-hidden="true></i> {{ item.text }}
-            {% if item.link %}
-            </a>
-            {% endif %}
-          </div>
-          {% endfor %}
-        </div>
-      </header>
+<div class="container">
+  <header>
+    <div class="name-wrapper">
+      <div id="fullname" class="title">
+        <strong>{{ site.data.resume.name }}</strong>
+      </div>
+      <div id="jobtitle" class="sub-title">
+        <strong>{{ site.data.resume.jobtitle }}</strong>
+      </div>
+    </div>
+    <div id="contact" class="contact">
+      {% for item in site.data.resume.contact %}
+      <div class="contact-item">
+        {% if item.link %}
+        <a href="{{ item.link }}">
+          {% endif %}
+          <i class="fa {{ item.icon }} aria-hidden=" true></i> {{ item.text }}
+          {% if item.link %}
+        </a>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </header>
 
-      <section id="education">
-        <div class="section-title">
-          Education
+  <section id="education">
+    <div class="section-title">
+      Education
+    </div>
+    <div class="section-content">
+      {% for edu in site.data.resume.education %}
+      <div class="block">
+        <div class="block-title">
+          {{ edu.university }}
         </div>
-        <div class="section-content">
-          {% for edu in site.data.resume.education %}
-          <div class="block">
-            <div class="block-title">
-              {{ edu.university }}
-            </div>
-            <div class="block-subtitle">
-              {{ edu.duration }} | {{ edu.location }}
-            </div>
-            <div class="block-content">
-              {{ edu.major }}
-            </div>
-          </div>
-          {% endfor %}
+        <div class="block-subtitle">
+          {{ edu.duration }} | {{ edu.location }}
         </div>
-      </section>
-
-      
-
-      <section id="experience">
-        <div class="section-title">
-          Work Experience
+        <div class="block-content">
+          {{ edu.major }}
         </div>
-        <div class="section-content">
-          {% for exp in site.data.experience.experience %}
-          <div class="block">
-            <div class="block-title">
-              {{ exp.title }} <br/>
-              <div class="inline-minor-title">{{ exp.company }}</div>
-            </div>
-            <div class="block-subtitle">
-              {{ exp.duration }} 
-            </div>
-            <div class="block-content">
-              <ul>
-              {% for subitem in exp.description %}
-                <li>{{ subitem }}</li>
-              {% endfor %}
-              </ul>
-            </div>
-          </div>
-          {% endfor %}
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+
+
+  <section id="experience">
+    <div class="section-title">
+      Work Experience
+    </div>
+    <div class="section-content">
+      {% for exp in site.data.experience.experience %}
+      <div class="block">
+        <div class="block-title">
+          {{ exp.title }} <br />
+          <div class="inline-minor-title">{{ exp.company }}</div>
         </div>
-      </section>
-
-      <section id="publications">
-        <div class="section-title">
-          Publications
+        <div class="block-subtitle">
+          {{ exp.duration }}
         </div>
-        
-        <div class="section-content">
-          <!-- category -->
-          {% for category in site.data.publications.publications %}
-          <div class="block">
-            <div class="block-title">
-              {{ category.pub_type }}
-            </div>
-            
-            {% for publication in category.entries %}
-
-            {% assign authors = publication.author | split: " and " %}
-
-            {% capture ieee_authors %}{% for author in authors %}
-                {% assign name_parts = author | split: ", " %}
-                {% assign first_name = name_parts[1] | slice: 0 %}
-                {% assign last_name = name_parts[0] %}
-                {{ first_name }}. {{ last_name }}
-                {% unless forloop.last %},{% else %}, and{% endunless %}
-            {% endfor %}{% endcapture %}
-
-            <div class="block-content">
-              <div class="block-subtitle item-key">
-                {{ publication.year }}
-              </div>
-              <div class="block-content item-value">
-                {% if category.pub_type == "Journal Papers" %}
-                {{ ieee_authors }}. {{ publication.title }}. <em>{{ publication.journal }}</em>.
-                {% elsif category.pub_type == "Conference Papers" %}
-                {{ ieee_authors }}. {{ publication.title }}, in the <em>{{ publication.booktitle }}</em> ({{publication.series}}). ({{ publication.note | replace: '\%', '%' }})
-                {% elsif category.pub_type == "Workshop Papers" %}
-                {% elsif category.pub_type == "Book Chapters" %}
-                {% elsif category.pub_type == "Books" %}
-                {% elsif category.pub_type == "Technical Reports" %}
-                {% elsif category.pub_type == "Thesis and Dissertation" %}
-                {{ ieee_authors }}. {{ publication.title }}, <em>{{ publication.school }}</em>
-                {% elsif category.pub_type == "Patents" %}
-                {% elsif category.pub_type == "Software Releases" %}
-                {{ ieee_authors }}. <a href="{{publication.url}}" target="_blank">{{ publication.title }}</a> <em>(link: <a href="{{publication.url}}" target="_blank">{{publication.url}}</a>)</em>.
-                {% elsif category.pub_type == "Extended Abstract" %}
-                {{ ieee_authors }}. {{ publication.title }}, <em>{{ publication.booktitle }}</em>
-                {% elsif category.pub_type == "Posters" %}
-                {{ ieee_authors }}. {{ publication.title }}, <em>{{ publication.series }}</em>
-                {% else %}
-                {{ ieee_authors }}. {{ publication.title }}.
-                {% endif %}
-              </div>
-            </div>
+        <div class="block-content">
+          <ul>
+            {% for subitem in exp.description %}
+            <li>{{ subitem }}</li>
             {% endfor %}
-          </div>
-          {% endfor %}
+          </ul>
         </div>
-      </section>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
 
-      <section id="presentations">
-        <div class="section-title">
-          Presentations
-        </div>
-        <div class="section-content">
-          {% for category in site.data.presentation.categories %}
-          <div class="block">
-            <div class="block-title">
-              {{ category.Type }}
-            </div>
-            {% for presentation in category.Entries %}
-            <div class="block-content">
-              <div class="block-subtitle item-key">
-                {{ presentation.time }}
-              </div>
-              <div class="block-content item-value">
-                {{ presentation.title }}, <em>{{ presentation.location }}</em>
-              </div>
-            </div>
-            {% endfor %}
-          </div>
-          {% endfor %}
-        </div>
-      </section>
-
-      <section id="services">
-        <div class="section-title">
-          Services
-        </div>
-        <div class="section-content">
-          {% for category in site.data.service.categories %}
-          <div class="block">
-            <div class="block-title">
-              {{ category.Type }}
-            </div>
-            {% for service in category.Entries %}
-            <div class="block">
-              <div class="block-subtitle item-key">
-                {% if service.year %}
-                {{ service.year }}
-                {% else %}
-                <strong>-</strong>
-                {% endif %}
-              </div>
-              <div class="block-content item-value">
-                {% if service.role %}
-                <div class="block-subtitle condensed-space" style="display:block">{{ service.role }}</div>
-                {% endif %}
-                <div class="block-content single-space" style="display:block">{{ service.title }}</div>
-              </div>
-            </div>
-            {% endfor %}
-          </div>
-          {% endfor %}
-        </div>
-      </section>
-
-      <section id="grantexp">
-        <div class="section-title">
-          Grant Experience
-        </div>
-        <div class="section-content">
-          {% for exp in site.data.grantexp %}
-          <div class="block">
-            <div class="block-title">
-              {{ exp.title }} 
-            </div>
-            <div class="block">
-              <div class="block-subtitle item-key" style="width:fit-content;">
-                {{ exp.year }} 
-              </div>
-              <div class="block-content item-value">
-                <ul>
-                {% for subitem in exp.contribution %}
-                  <li>{{ subitem }}</li>
-                {% endfor %}
-                </ul>
-              </div>
-            </div>
-          </div>
-          {% endfor %}
-        </div>
-      </section>
-
-
-      <section id="teaching">
-        <div class="section-title">
-          Teaching<br/>Experience
-        </div>
-        <div class="section-content">
-          {% for category in site.data.teaching.categories %}
-          <div class="block">
-            <div class="block-title">
-              {{ category.Type }}
-            </div>
-            {% for entry in category.Entries %}
-            <div class="block">
-              <div class="block-subtitle single-space">
-                <strong>{{ entry.course }}</strong> 
-              </div>
-              <div class="block-content single-space">
-                 {{ entry.title }} | <em>{{ entry.location }}</em> <br/>
-              </div>
-            </div>
-            {% endfor %}
-          </div>
-          {% endfor %}
-        </div>
-      </section>
-
-      <section id="skills">
-        <div class="section-title">
-          Skills
-        </div>
-        <div class="section-content">
-          {% for skill in site.data.resume.skills %}
-          <div class="block single-space">
-            <div class="block-title single-space">
-              {{ skill.title }}
-            </div>
-            <div class="block-content single-space" style="padding-left:1rem;">
-              {{ skill.items }}
-            </div>
-          </div>
-          {% endfor %}
-        </div>
-      </section>
-
-      <section id="languages">
-        <div class="section-title">
-          Languages
-        </div>
-        <div class="section-content section-flex">
-          {% for language in site.data.resume.languages %}
-          <div class="block block-square">
-            <div class="block-title">
-              {{ language.name }}
-            </div>
-            <div class="block-content">
-              {{ language.proficiency }}
-            </div>
-          </div>
-          {% endfor %}
-        </div>
-      </section>
+  <section id="publications">
+    <div class="section-title">
+      Publications
     </div>
 
+    <div class="section-content">
+      <!-- category -->
+      {% for category in site.data.publications.publications %}
+      <div class="block">
+        <div class="block-title">
+          {{ category.pub_type }}
+        </div>
+
+        {% for publication in category.entries %}
+
+        {% assign authors = publication.author | split: " and " %}
+
+        {% capture ieee_authors %}{% for author in authors %}
+        {% assign name_parts = author | split: ", " %}
+        {% assign first_name = name_parts[1] | slice: 0 %}
+        {% assign last_name = name_parts[0] %}
+        {{ first_name }}. {{ last_name }}
+        {% unless forloop.index == forloop.length - 1%},{% else %}, and{% endunless %}
+        {% endfor %}{% endcapture %}
+
+        <div class="block-content">
+          <div class="block-subtitle item-key">
+            {{ publication.year }}
+          </div>
+          <div class="block-content item-value">
+            {% if category.pub_type == "Journal Papers" %}
+            {{ ieee_authors }}. {{ publication.title }}. <em>{{ publication.journal }}</em>.
+            {% elsif category.pub_type == "Conference Papers" %}
+            {{ ieee_authors }}. {{ publication.title }}, in the <em>{{ publication.booktitle }}</em>
+            ({{publication.series}}). ({{ publication.note | replace: '\%', '%' }})
+            {% elsif category.pub_type == "Workshop Papers" %}
+            {% elsif category.pub_type == "Book Chapters" %}
+            {% elsif category.pub_type == "Books" %}
+            {% elsif category.pub_type == "Technical Reports" %}
+            {% elsif category.pub_type == "Thesis and Dissertation" %}
+            {{ ieee_authors }}. {{ publication.title }}, <em>{{ publication.school }}</em>
+            {% elsif category.pub_type == "Patents" %}
+            {% elsif category.pub_type == "Software Releases" %}
+            {{ ieee_authors }}. <a href="{{publication.url}}" target="_blank">{{ publication.title }}</a> <em>(link: <a
+                href="{{publication.url}}" target="_blank">{{publication.url}}</a>)</em>.
+            {% elsif category.pub_type == "Extended Abstract" %}
+            {{ ieee_authors }}. {{ publication.title }}, <em>{{ publication.booktitle }}</em>
+            {% elsif category.pub_type == "Posters" %}
+            {{ ieee_authors }}. {{ publication.title }}, <em>{{ publication.series }}</em>
+            {% else %}
+            {{ ieee_authors }}. {{ publication.title }}.
+            {% endif %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section id="presentations">
+    <div class="section-title">
+      Presentations
+    </div>
+    <div class="section-content">
+      {% for category in site.data.presentation.categories %}
+      <div class="block">
+        <div class="block-title">
+          {{ category.Type }}
+        </div>
+        {% for presentation in category.Entries %}
+        <div class="block-content">
+          <div class="block-subtitle item-key">
+            {{ presentation.time }}
+          </div>
+          <div class="block-content item-value">
+            {{ presentation.title }}, <em>{{ presentation.location }}</em>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="section-title">
+      Services
+    </div>
+    <div class="section-content">
+      {% for category in site.data.service.categories %}
+      <div class="block">
+        <div class="block-title">
+          {{ category.Type }}
+        </div>
+        {% for service in category.Entries %}
+        <div class="block">
+          <div class="block-subtitle item-key">
+            {% if service.year %}
+            {{ service.year }}
+            {% else %}
+            <strong>-</strong>
+            {% endif %}
+          </div>
+          <div class="block-content item-value">
+            {% if service.role %}
+            <div class="block-subtitle condensed-space" style="display:block">{{ service.role }}</div>
+            {% endif %}
+            <div class="block-content single-space" style="display:block">{{ service.title }}</div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section id="grantexp">
+    <div class="section-title">
+      Grant Experience
+    </div>
+    <div class="section-content">
+      {% for exp in site.data.grantexp %}
+      <div class="block">
+        <div class="block-title">
+          {{ exp.title }}
+        </div>
+        <div class="block">
+          <div class="block-subtitle item-key" style="width:fit-content;">
+            {{ exp.year }}
+          </div>
+          <div class="block-content item-value">
+            <ul>
+              {% for subitem in exp.contribution %}
+              <li>{{ subitem }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+
+  <section id="teaching">
+    <div class="section-title">
+      Teaching<br />Experience
+    </div>
+    <div class="section-content">
+      {% for category in site.data.teaching.categories %}
+      <div class="block">
+        <div class="block-title">
+          {{ category.Type }}
+        </div>
+        {% for entry in category.Entries %}
+        <div class="block">
+          <div class="block-subtitle single-space">
+            <strong>{{ entry.course }}</strong>
+          </div>
+          <div class="block-content single-space">
+            {{ entry.title }} | <em>{{ entry.location }}</em> <br />
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="section-title">
+      Skills
+    </div>
+    <div class="section-content">
+      {% for skill in site.data.resume.skills %}
+      <div class="block single-space">
+        <div class="block-title single-space">
+          {{ skill.title }}
+        </div>
+        <div class="block-content single-space" style="padding-left:1rem;">
+          {{ skill.items }}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section id="languages">
+    <div class="section-title">
+      Languages
+    </div>
+    <div class="section-content section-flex">
+      {% for language in site.data.resume.languages %}
+      <div class="block block-square">
+        <div class="block-title">
+          {{ language.name }}
+        </div>
+        <div class="block-content">
+          {{ language.proficiency }}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+</div>
