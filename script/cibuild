@@ -20,7 +20,7 @@ echo "Run publication generator"
 
 # generate publication
 python publication_generator.py
-source bin/deactivate
+deactivate
 cd ../
 
 # test publications.yml
