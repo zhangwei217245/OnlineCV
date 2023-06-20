@@ -122,7 +122,7 @@ layout: default
                 {% unless forloop.last %}
                   {{ first_name }}{% if last_name %}. {{ last_name }}{% endif %},
                 {% else %}
-                  and {{ first_name }}{% if last_name %}. {{ last_name }}{% endif %}
+                  and {{ first_name }}{% if last_name %}. {{ last_name }}{% endif %}.
                 {% endunless %}
               {% endfor %}
             {% endcapture %}
@@ -135,7 +135,7 @@ layout: default
                   {{ ieee_authors }}. {{ publication.title }}.
                   <em>{{ publication.journal }}</em>.
                 {% elsif category.pub_type == "Conference Papers" %}
-                  {{ ieee_authors }}. {{ publication.title }}, in the
+                  {{ ieee_authors }} {{ publication.title }}, in the
                   <em>{{ publication.booktitle }}</em>
                   ({{ publication.series }}). ({{ publication.note | replace: '\%', '%' }})
                 {% elsif category.pub_type == "Workshop Papers" %}
