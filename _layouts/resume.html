@@ -112,16 +112,20 @@ layout: default
 
             {% capture ieee_authors %}
               {% for author in authors %}
-                {% assign name_parts = author | split: ", " %}
-                {% assign first_name = name_parts[1] | slice: 0 %}
-                {% assign last_name = name_parts[0] %}
+                {% if author contains ", " %}
+                  {% assign name_parts = author | split: ", " %}
+                  {% assign first_name = name_parts[1] | slice: 0 %}
+                  {% assign last_name = name_parts[0] %}
+                {% else %}
+                  {% assign first_name = author %}
+                {% endif %}
                 {% if forloop.first %}
-                  {{ first_name }}. {{ last_name }}
+                  {{ first_name }}{% if last_name %}. {{ last_name }}{% endif %}
                 {% else %}
                   {% unless forloop.last %}
-                    {{ first_name }}. {{ last_name }},
+                    {{ first_name }}{% if last_name %}. {{ last_name }}{% endif %},
                   {% else %}
-                    {{ first_name }}. {{ last_name }}, and
+                    {{ first_name }}{% if last_name %}. {{ last_name }}{% endif %}, and
                   {% endunless %}
                 {% endif %}
               {% endfor %}
