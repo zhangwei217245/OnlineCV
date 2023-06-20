@@ -172,12 +172,37 @@ Colors powered by [Nord](https://www.nordtheme.com/):
      </div>
    </section>
    ```
+## Maintaining publication list
+
+All you have to do is to maintain the `.bib` files under `_data/bibtex` directory.
+
+Remember that to use the following format for `author` field of each bib entry.
+
+```
+first_name, last_name and first_name2, last_name2 and ...
+```
+
+`_includes/foot.html` contains the Javascript that highlights your name in the publication list.
+
+## Modifying the page layout
+
+Go to `_layouts/resume.html` and look for the Liquid macros. 
+
+## Publish this on Github pages
+
+Make sure to use Github actions for publishing Github pages. 
+
+`.github/workflows/jekyll.yml` is the file that specifies the steps running when publishing the site.
+
+`script/cibuild` is the script that will be run by the steps defined in `.github/workflows/jekyll.yml`. It will also run the 
+`script/publication_generator.py` which can generate the `_data/publications.yml` for you during `Jekyll` build process.
 
 ## Showcases
 
 Feel free to add yours here.
 
 - [David Zhang](https://crispgm.com/resume/)
+- [Wei Zhang](https://zhangwei217245.github.io/OnlineCV)
 
 ## Donation
 
