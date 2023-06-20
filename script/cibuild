@@ -77,12 +77,17 @@ else
   exit 1
 fi
 
-# build with Gem
-rm -rf ./_site
-bundle exec jekyll build --config ./_config_gem.yml
-if test -e "./_site/LResume.html";then
-  echo "LResume with gem smokes!"
+# check if JEKYLL_ENV is production
+if [ "$JEKYLL_ENV" = "production" ]; then
+  echo "JEKYLL_ENV is production. \n Ignore Gem build."
 else
-  echo "Build Long EN version with Gem failed"
-  exit 1
+  # build with Gem
+  rm -rf ./_site
+  bundle exec jekyll build --config ./_config_gem.yml
+  if test -e "./_site/LResume.html";then
+    echo "LResume with gem smokes!"
+  else
+    echo "Build Long EN version with Gem failed"
+    exit 1
+  fi
 fi
