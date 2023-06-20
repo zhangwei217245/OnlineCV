@@ -132,7 +132,7 @@ layout: default
               </div>
               <div class="block-content item-value">
                 {% if category.pub_type == "Journal Papers" %}
-                  {{ ieee_authors }}. {{ publication.title }}.
+                  {{ ieee_authors }} {{ publication.title }}.
                   <em>{{ publication.journal }}</em>.
                 {% elsif category.pub_type == "Conference Papers" %}
                   {{ ieee_authors }} {{ publication.title }}, in the
@@ -143,22 +143,22 @@ layout: default
                 {% elsif category.pub_type == "Books" %}
                 {% elsif category.pub_type == "Technical Reports" %}
                 {% elsif category.pub_type == "Thesis and Dissertation" %}
-                  {{ ieee_authors }}. {{ publication.title }},
+                  {{ ieee_authors }} {{ publication.title }},
                   <em>{{ publication.school }}</em>
                 {% elsif category.pub_type == "Patents" %}
                 {% elsif category.pub_type == "Software Releases" %}
-                  {{ ieee_authors }}.
+                  {{ ieee_authors }}
                   <a href="{{publication.url}}" target="_blank">{{ publication.title }}</a>
                   <em>(link:
                     <a href="{{publication.url}}" target="_blank">{{ publication.url }}</a>)</em>.
                 {% elsif category.pub_type == "Extended Abstract" %}
-                  {{ ieee_authors }}. {{ publication.title }},
+                  {{ ieee_authors }} {{ publication.title }},
                   <em>{{ publication.booktitle }}</em>
                 {% elsif category.pub_type == "Posters" %}
-                  {{ ieee_authors }}. {{ publication.title }},
+                  {{ ieee_authors }} {{ publication.title }},
                   <em>{{ publication.series }}</em>
                 {% else %}
-                  {{ ieee_authors }}. {{ publication.title }}.
+                  {{ ieee_authors }} {{ publication.title }}.
                 {% endif %}
               </div>
             </div>
