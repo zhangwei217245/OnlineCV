@@ -118,7 +118,7 @@ layout: default
                   {% assign last_name = name_parts[0] %}
                 {% else %}
                   {% assign first_name = author %}
-                  {% assign last_name = "" %}
+                  {% assign last_name = false %}
                 {% endif %}
                 {% unless forloop.last %}
                   {{ first_name }}{% if last_name %}. {{ last_name }}{% endif %},
