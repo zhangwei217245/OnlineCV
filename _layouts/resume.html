@@ -30,7 +30,7 @@ layout: default
     </div>
   </header>
 
-  {% if page.permalink == '/resume.html' %}
+  {% if page.permalink contains "Resume.html" %}
 
   <section id="education">
     <div class="section-title">
@@ -102,10 +102,10 @@ layout: default
         {% assign name_parts = author | split: ", " %}
         {% assign first_name = name_parts[1] | slice: 0 %}
         {% assign last_name = name_parts[0] %}
-        {{ first_name }}. {{ last_name }}
-        {% unless forloop.index == forloop.length - 2%},{% else %}, and{% endunless %}
-        {% endfor %}{% endcapture %}
-
+        
+        {{forloop.length}} | {{ first_name }}. {{ last_name }}
+        {% if forloop.index < forloop.length - 2%},{% else %}, and{% endunless %} {% endfor %}
+        {% endcapture %} 
         <div class="block-content">
           <div class="block-subtitle item-key">
             {{ publication.year }}
