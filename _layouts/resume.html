@@ -119,15 +119,11 @@ layout: default
                 {% else %}
                   {% assign first_name = author %}
                 {% endif %}
-                {% if forloop.first %}
-                  {{ first_name }}{% if last_name %}. {{ last_name }}{% endif %}
+                {% unless forloop.last %}
+                  {{ first_name }}{% if last_name %}. {{ last_name }}{% endif %},
                 {% else %}
-                  {% unless forloop.last %}
-                    {{ first_name }}{% if last_name %}. {{ last_name }}{% endif %},
-                  {% else %}
-                    {{ first_name }}{% if last_name %}. {{ last_name }}{% endif %}, and
-                  {% endunless %}
-                {% endif %}
+                  and {{ first_name }}{% if last_name %}. {{ last_name }}{% endif %}
+                {% endunless %}
               {% endfor %}
             {% endcapture %}
             <div class="block-content">
