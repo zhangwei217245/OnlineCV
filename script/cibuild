@@ -4,16 +4,45 @@ set -e
 
 echo "Building Jekyll site"
 
+echo "Run publication generator"
+
+# install dependencies
+cd ./_scripts
+python3 -m venv ./
+source bin/activate
+pip install bibtexparser
+pip install pyyaml
+
+# generate publication
+python publication_generator.py
+cd ../
+
 # lint
 bundle exec scss-lint --config=.scss-lint.yml
 
 bundle exec jekyll build
 
-# build English version
-if test -e "./_site/resume.html";then
+# build Long English version
+if test -e "./_site/LResume.html";then
   echo "It smokes!"
 else
-  echo "Build EN version failed"
+  echo "Build Long EN version failed"
+  exit 1
+fi
+
+# build Short English version
+if test -e "./_site/SResume.html";then
+  echo "It smokes!"
+else
+  echo "Build Short EN version failed"
+  exit 1
+fi
+
+# build Default English version
+if test -e "./_site/index.html";then
+  echo "It smokes!"
+else
+  echo "Build Default EN version failed"
   exit 1
 fi
 
