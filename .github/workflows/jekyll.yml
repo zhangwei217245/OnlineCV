@@ -30,18 +30,27 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        ruby: [3.0.0, 2.6.0]
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@55283cc23133118229fd3f97f9336ee23a179fcf # v1.146.0
+      - uses: actions/checkout@master
+      - uses: mstachniuk/ci-skip@v1
         with:
-          ruby-version: '3.1' # Not needed with a .ruby-version file
-          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-          cache-version: 0 # Increment this number if you need to re-download cached gems
+          fail-fast: true
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby }}
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v3
+      - name: "Update Rubygems & Bundler"
+        run: "gem update --system --no-document && gem update bundler --no-document"
+      - name: "Install Bundler 2"
+        run: 'gem install bundler -v "2.0.1" --force'
+      - name: "Setup bundle"
+        run: "bundle install --jobs 4 --retry 3"
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
         run: script/cibuild "${{ steps.pages.outputs.base_path }}"

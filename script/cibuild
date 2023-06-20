@@ -2,6 +2,9 @@
 
 set -e
 
+# read first console argument
+BASEURL=$1;
+
 echo "Building Jekyll site"
 
 echo "Prepare publication generator"
@@ -23,6 +26,7 @@ cd ../
 # test publications.yml
 if test -e "./_data/publications.yml";then
   echo "publications.yml smokes!"
+  cat ./_data/publications.yml
 else
   echo "Build publications.yml failed"
   exit 1
@@ -30,8 +34,7 @@ fi
 
 # lint
 bundle exec scss-lint --config=.scss-lint.yml
-
-bundle exec jekyll build
+bundle exec jekyll build --baseurl $BASEURL
 
 # build Long English version
 if test -e "./_site/LResume.html";then
