@@ -68,7 +68,7 @@ layout: default
             <div class="inline-minor-title">{{ exp.company }}</div>
           </div>
           <div class="block-subtitle">
-            {% if page.permalink == 'LResume.html' %}
+            {% if page.permalink contains '/LResume.html' %}
               {{ exp.duration }}
             {% else %}
               {% assign dates = exp.duration | split: " - " %}
@@ -115,11 +115,11 @@ layout: default
                 {% assign name_parts = author | split: ", " %}
                 {% assign first_name = name_parts[1] | slice: 0 %}
                 {% assign last_name = name_parts[0] %}
-                {% unless forloop.first %}
+                {% if forloop.first %}
                   {% else %}
                     {% unless forloop.last %}, {% else %}, and
                     {% endunless %}
-                {% endunless %}
+                {% endif %}
                 {{ first_name }}. {{ last_name }}
               {% endfor %}
             {% endcapture %}
@@ -165,118 +165,122 @@ layout: default
     </div>
   </section>
 
-  <section id="presentations">
-    <div class="section-title">
-      Presentations
-    </div>
-    <div class="section-content">
-      {% for category in site.data.presentation.categories %}
-        <div class="block">
-          <div class="block-title">
-            {{ category.Type }}
-          </div>
-          {% for presentation in category.Entries %}
-            <div class="block-content">
-              <div class="block-subtitle item-key">
-                {{ presentation.time }}
-              </div>
-              <div class="block-content item-value">
-                {{ presentation.title }},
-                <em>{{ presentation.location }}</em>
-              </div>
-            </div>
-          {% endfor %}
-        </div>
-      {% endfor %}
-    </div>
-  </section>
-
-  <section id="services">
-    <div class="section-title">
-      Services
-    </div>
-    <div class="section-content">
-      {% for category in site.data.service.categories %}
-        <div class="block">
-          <div class="block-title">
-            {{ category.Type }}
-          </div>
-          {% for service in category.Entries %}
-            <div class="block">
-              <div class="block-subtitle item-key">
-                {% if service.year %}
-                  {{ service.year }}
-                {% else %}
-                  <strong>-</strong>
-                {% endif %}
-              </div>
-              <div class="block-content item-value">
-                {% if service.role %}
-                  <div class="block-subtitle condensed-space" style="display:block">{{ service.role }}</div>
-                {% endif %}
-                <div class="block-content single-space" style="display:block">{{ service.title }}</div>
-              </div>
-            </div>
-          {% endfor %}
-        </div>
-      {% endfor %}
-    </div>
-  </section>
-
-  <section id="grantexp">
-    <div class="section-title">
-      Grant Experience
-    </div>
-    <div class="section-content">
-      {% for exp in site.data.grantexp %}
-        <div class="block">
-          <div class="block-title">
-            {{ exp.title }}
-          </div>
+  {% unless page.permalink contains 'SResume' %}
+    <section id="presentations">
+      <div class="section-title">
+        Presentations
+      </div>
+      <div class="section-content">
+        {% for category in site.data.presentation.categories %}
           <div class="block">
-            <div class="block-subtitle item-key" style="width:fit-content;">
-              {{ exp.year }}
+            <div class="block-title">
+              {{ category.Type }}
             </div>
-            <div class="block-content item-value">
-              <ul>
-                {% for subitem in exp.contribution %}
-                  <li>{{ subitem }}</li>
-                {% endfor %}
-              </ul>
-            </div>
-          </div>
-        </div>
-      {% endfor %}
-    </div>
-  </section>
-
-
-  <section id="teaching">
-    <div class="section-title">
-      Teaching<br/>Experience
-    </div>
-    <div class="section-content">
-      {% for category in site.data.teaching.categories %}
-        <div class="block">
-          <div class="block-title">
-            {{ category.Type }}
-          </div>
-          {% for entry in category.Entries %}
-            <div class="block">
-              <div class="block-subtitle single-space">
-                <strong>{{ entry.course }}</strong>
+            {% for presentation in category.Entries %}
+              <div class="block-content">
+                <div class="block-subtitle item-key">
+                  {{ presentation.time }}
+                </div>
+                <div class="block-content item-value">
+                  {{ presentation.title }},
+                  <em>{{ presentation.location }}</em>
+                </div>
               </div>
-              <div class="block-content single-space">
-                {{ entry.title }} |
-                <em>{{ entry.location }}</em>
-                <br/>
+            {% endfor %}
+          </div>
+        {% endfor %}
+      </div>
+    </section>
+
+
+    <section id="services">
+      <div class="section-title">
+        Services
+      </div>
+      <div class="section-content">
+        {% for category in site.data.service.categories %}
+          <div class="block">
+            <div class="block-title">
+              {{ category.Type }}
+            </div>
+            {% for service in category.Entries %}
+              <div class="block">
+                <div class="block-subtitle item-key">
+                  {% if service.year %}
+                    {{ service.year }}
+                  {% else %}
+                    <strong>-</strong>
+                  {% endif %}
+                </div>
+                <div class="block-content item-value">
+                  {% if service.role %}
+                    <div class="block-subtitle condensed-space" style="display:block">{{ service.role }}</div>
+                  {% endif %}
+                  <div class="block-content single-space" style="display:block">{{ service.title }}</div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        {% endfor %}
+      </div>
+    </section>
+    {% if page.permalink contains 'LResume' %}
+      <section id="grantexp">
+        <div class="section-title">
+          Grant Experience
+        </div>
+        <div class="section-content">
+          {% for exp in site.data.grantexp %}
+            <div class="block">
+              <div class="block-title">
+                {{ exp.title }}
+              </div>
+              <div class="block">
+                <div class="block-subtitle item-key" style="width:fit-content;">
+                  {{ exp.year }}
+                </div>
+                <div class="block-content item-value">
+                  <ul>
+                    {% for subitem in exp.contribution %}
+                      <li>{{ subitem }}</li>
+                    {% endfor %}
+                  </ul>
+                </div>
               </div>
             </div>
           {% endfor %}
         </div>
-      {% endfor %}
-    </div>
-  </section>
+      </section>
+    {% endif %}
+
+    <section id="teaching">
+      <div class="section-title">
+        Teaching<br/>Experience
+      </div>
+      <div class="section-content">
+        {% for category in site.data.teaching.categories %}
+          <div class="block">
+            <div class="block-title">
+              {{ category.Type }}
+            </div>
+            {% for entry in category.Entries %}
+              <div class="block">
+                <div class="block-subtitle single-space">
+                  <strong>{{ entry.course }}</strong>
+                </div>
+                <div class="block-content single-space">
+                  {{ entry.title }} |
+                  <em>{{ entry.location }}</em>
+                  <br/>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        {% endfor %}
+      </div>
+    </section>
+
+  {% endunless %}
 
   {% if page.permalink == '/index.html' %}
 
