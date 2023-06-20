@@ -1,5 +1,5 @@
 title: Résumé
-baseurl: "/resume/"
+baseurl: "/OnlineCV"
 theme: "jekyll-theme-minimal-resume"
 exclude:
   - README.md

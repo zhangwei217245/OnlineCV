@@ -1,5 +1,5 @@
 title: Résumé
-baseurl: "/resume/"
+baseurl: "/OnlineCV"
 color: nord
 exclude:
   - README.md

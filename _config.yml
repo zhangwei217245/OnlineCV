@@ -1,5 +1,5 @@
 title: Wei Zhang's Online CV
-baseurl: "/OnlineCV/"
+baseurl: "/OnlineCV"
 color: blue
 exclude:
   - README.md
