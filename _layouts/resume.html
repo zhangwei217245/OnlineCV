@@ -116,11 +116,14 @@ layout: default
                 {% assign first_name = name_parts[1] | slice: 0 %}
                 {% assign last_name = name_parts[0] %}
                 {% if forloop.first %}
+                  {{ first_name }}. {{ last_name }}
+                {% else %}
+                  {% unless forloop.last %}
+                    {{ first_name }}. {{ last_name }},
                   {% else %}
-                    {% unless forloop.last %}, {% else %}, and
-                    {% endunless %}
+                    {{ first_name }}. {{ last_name }}, and
+                  {% endunless %}
                 {% endif %}
-                {{ first_name }}. {{ last_name }}
               {% endfor %}
             {% endcapture %}
             <div class="block-content">
