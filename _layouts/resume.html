@@ -123,9 +123,7 @@ layout: default
                 {% unless forloop.last %}
                   {{ first_name }}{% if last_name %}. {{ last_name }}{% endif %},
                 {% else %}
-                  {% # comment %}
                   {% unless forloop.first %}and {% endunless %}{{ first_name }}{% if last_name %}. {{ last_name }}{% endif %}.
-                  {% # endcomment %}
                 {% endunless %}
               {% endfor %}
             {% endcapture %}
