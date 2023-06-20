@@ -7,7 +7,7 @@ echo "Building Jekyll site"
 echo "Run publication generator"
 
 # install dependencies
-cd ./scripts
+cd ./script
 python3 -m venv ./
 source bin/activate
 pip install bibtexparser
