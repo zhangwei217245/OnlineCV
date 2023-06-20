@@ -5,6 +5,8 @@ set -e
 # read first console argument
 BASEURL=$1;
 
+echo "Base Url is $BASEURL"
+
 echo "Building Jekyll site"
 
 echo "Prepare publication generator"
