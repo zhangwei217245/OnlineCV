@@ -18,7 +18,10 @@ layout: default
         {% if item.link %}
         <a href="{{ item.link }}">
           {% endif %}
+          {% if page.permalink == '/index.html' and item.icon == 'fa-phone-square' %}
+          {% else %}
           <i class="fa {{ item.icon }} aria-hidden=" true></i> {{ item.text }}
+          {% endif %}
           {% if item.link %}
         </a>
         {% endif %}
@@ -26,6 +29,8 @@ layout: default
       {% endfor %}
     </div>
   </header>
+
+  {% if page.permalink == '/resume.html' %}
 
   <section id="education">
     <div class="section-title">
@@ -48,7 +53,7 @@ layout: default
     </div>
   </section>
 
-
+  {% endif %}
 
   <section id="experience">
     <div class="section-title">
@@ -98,7 +103,7 @@ layout: default
         {% assign first_name = name_parts[1] | slice: 0 %}
         {% assign last_name = name_parts[0] %}
         {{ first_name }}. {{ last_name }}
-        {% unless forloop.index == forloop.length - 1%},{% else %}, and{% endunless %}
+        {% unless forloop.index == forloop.length - 2%},{% else %}, and{% endunless %}
         {% endfor %}{% endcapture %}
 
         <div class="block-content">
@@ -245,6 +250,31 @@ layout: default
       {% endfor %}
     </div>
   </section>
+
+  {% if page.permalink == '/index.html' %}
+
+  <section id="education">
+    <div class="section-title">
+      Education
+    </div>
+    <div class="section-content">
+      {% for edu in site.data.resume.education %}
+      <div class="block">
+        <div class="block-title">
+          {{ edu.university }}
+        </div>
+        <div class="block-subtitle">
+          {{ edu.duration }} | {{ edu.location }}
+        </div>
+        <div class="block-content">
+          {{ edu.major }}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  {% endif %}
 
   <section id="skills">
     <div class="section-title">
