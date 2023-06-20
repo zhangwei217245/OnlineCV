@@ -7,3 +7,4 @@ node_modules
 script/bin
 script/lib
 script/include
+_data/publications.yml
