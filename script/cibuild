@@ -34,7 +34,14 @@ fi
 
 # lint
 bundle exec scss-lint --config=.scss-lint.yml
-bundle exec jekyll build --baseurl $BASEURL
+
+# test if $BASEURL is non-empty
+if [ -z "$BASEURL" ]; then
+  bundle exec jekyll build
+else
+  bundle exec jekyll build --baseurl $BASEURL
+fi 
+
 
 # build Long English version
 if test -e "./_site/LResume.html";then
