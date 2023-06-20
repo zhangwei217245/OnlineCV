@@ -76,7 +76,7 @@ layout: default
         {% assign first_name = name_parts[1] | slice: 0 %}
         {% assign last_name = name_parts[0] %}
         {{ first_name }}. {{ last_name }}
-        {% unless forloop.index == forloop.length - 1%},{% else %}, and{% endunless %}
+        {% unless forloop.index == forloop.length - 2%},{% else %}, and{% endunless %}
         {% endfor %}{% endcapture %}
 
         <div class="block-content">
